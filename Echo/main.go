@@ -1,4 +1,4 @@
-package main
+package Echo
 
 import (
 	"Godis/IOUtils"
@@ -10,7 +10,7 @@ import (
 )
 
 
-func ListenAndServer(addr string) {
+func ListenAndServe(addr string) {
 	listener, err := net.Listen("tcp", addr)
 	if err != nil {
 		log.Fatal(fmt.Sprintf("Failed to listen %s, error is: %s", addr, err.Error()))
@@ -43,8 +43,4 @@ func Handle(conn net.Conn) {
 			IOUtils.Write(conn, []byte(data))
 		}
 	}
-}
-
-func main()  {
-	ListenAndServer("127.0.0.1:8088")
 }
