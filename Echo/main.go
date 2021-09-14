@@ -1,7 +1,7 @@
 package Echo
 
 import (
-	"Godis/IOUtils"
+	"Godis/lib/IOUtils"
 	"bufio"
 	"fmt"
 	"io"
